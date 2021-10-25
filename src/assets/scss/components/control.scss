@@ -1,0 +1,48 @@
+@import "../mixins";
+.control {
+	.MuiButton-contained {
+		background-color:rgba(rgba(3, 24, 58, 0.796),0.70);
+	}
+	&__noise {
+		button {
+			padding: 0.5rem 2.8rem;
+		}
+	}
+	&__visibility {
+		top: 0.5rem;
+		right: 0.5rem;
+		position: fixed;
+		z-index: 110;
+	}
+
+
+	&__content {
+		left: 0;
+		right: 0;
+		top: -36rem;
+		z-index: 100;
+		padding: 1rem;
+		position: fixed;
+		padding-top: 3rem;
+		background-color: rgba(#062333, 0.45); 
+		transition: top 300ms ease-in-out;
+		@include on("lg") {
+			padding-top: 1rem;
+		}
+		&.visible {
+			top: 0;
+		}
+	}
+	&__speeds {
+		button {
+			padding: 2px 6.4px !important;
+			min-width: auto !important;
+			color: white !important;
+			border-color: rgba(#03183acb,0.70);
+		}
+		button:not(:first-child) {
+			margin-left: 6px;
+		}
+	}
+}
+
